@@ -1,0 +1,112 @@
+﻿{
+    "clients": {
+        "remove": [ "sample", "other_sample" ],
+        "add": [
+            {
+                "Enabled": true,
+                "ClientId": "sample",
+                "ClientName": "Sample Client",
+                "Flow": "Implicit",
+                "RequireConsent": false,
+                "ClientSecrets": [
+                    { "Value": "sha256:secret" }
+                ],
+                "RedirectUris": [
+                    "http://localhost:20025/"
+                ],
+                "PostLogoutRedirectUris": [
+                    "http://localhost:20025/"
+                ],
+                "ScopeRestrictions": [
+                    "openid",
+                    "profile",
+                    "email",
+                    "roles",
+                    "api1"
+                ],
+                "AccessTokenType": "JWT",
+                "AccessTokenLifetime": 3600
+            }
+        ]
+    },
+    "scopes": {
+        "remove": [ "openid", "profile", "email", "roles", "all_claims", "api1", "api2" ],
+        "add": [
+            {
+                "Name": "openid",
+                "DisplayName": "Your user identifier",
+                "Required": true,
+                "Type": "Identity",
+                "Claims": [
+                    { "Name": "sub", "AlwaysIncludeInIdToken": true }
+                ]
+            },
+            {
+                "Name": "profile",
+                "DisplayName": "User profile",
+                "Required": true,
+                "Type": "Identity",
+                "Claims": [
+                    { "Name": "name", "AlwaysIncludeInIdToken": true },
+                    { "Name": "given_name", "AlwaysIncludeInIdToken": true },
+                    { "Name": "family_name", "AlwaysIncludeInIdToken": true },
+                    { "Name": "middle_name", "AlwaysIncludeInIdToken": true },
+                    { "Name": "nickname", "AlwaysIncludeInIdToken": true },
+                    { "Name": "preferred_username", "AlwaysIncludeInIdToken": true },
+                    { "Name": "profile", "AlwaysIncludeInIdToken": true },
+                    { "Name": "picture", "AlwaysIncludeInIdToken": true },
+                    { "Name": "website", "AlwaysIncludeInIdToken": true },
+                    { "Name": "gender", "AlwaysIncludeInIdToken": true },
+                    { "Name": "birthdate", "AlwaysIncludeInIdToken": true },
+                    { "Name": "zoneinfo", "AlwaysIncludeInIdToken": true },
+                    { "Name": "locale", "AlwaysIncludeInIdToken": true },
+                    { "Name": "updated_at", "AlwaysIncludeInIdToken": true }
+                ]
+            },
+            {
+                "Name": "email",
+                "DisplayName": "Your email address",
+                "Required": true,
+                "Type": "Identity",
+                "Claims": [
+                    { "Name": "email", "AlwaysIncludeInIdToken": true },
+                    { "Name": "email_verified", "AlwaysIncludeInIdToken": true }
+                ]
+            },
+            {
+                "Name": "roles",
+                "DisplayName": "User roles",
+                "Required": true,
+                "Type": "Identity",
+                "Claims": [
+                    { "Name": "role", "AlwaysIncludeInIdToken": true }
+                ]
+            },
+            {
+                "Name": "all_claims",
+                "DisplayName": "All user information",
+                "Required": true,
+                "Type": "Identity",
+                "IncludeAllClaimsForUser": true
+            },
+            {
+                "Name": "api1",
+                "DisplayName": "Sample API 1",
+                "Required": true,
+                "Type": "Resource",
+                "IncludeAllClaimsForUser": true,
+                "Claims": [ ]
+            },
+            {
+                "Name": "api2",
+                "DisplayName": "Sample API 2",
+                "Required": true,
+                "Type": "Resource",
+                "IncludeAllClaimsForUser": false,
+                "Claims": [
+                    { "Name": "role", "AlwaysIncludeInIdToken": true }
+                ]
+            }
+        ]
+    }
+}
