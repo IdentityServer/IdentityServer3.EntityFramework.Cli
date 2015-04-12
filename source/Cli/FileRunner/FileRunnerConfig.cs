@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using Thinktecture.IdentityServer.Core.Models;
 
-namespace IdentityServer3.EntityFramework.Cli
+namespace IdentityServer3.EntityFramework.Cli.FileRunner
 {
-    public class RunnerConfig
+    public class FileRunnerConfig
     {
         public SectionConfig<Client> Clients { get; set; }
         public SectionConfig<Scope> Scopes { get; set; }
