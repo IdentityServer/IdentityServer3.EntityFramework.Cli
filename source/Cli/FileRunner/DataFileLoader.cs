@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace IdentityServer3.EntityFramework.Cli
+namespace IdentityServer3.EntityFramework.Cli.FileRunner
 {
     public class DataFileLoader
     {

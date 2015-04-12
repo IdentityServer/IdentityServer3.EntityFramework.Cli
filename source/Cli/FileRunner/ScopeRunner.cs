@@ -4,7 +4,7 @@ using System.Linq;
 using Thinktecture.IdentityServer.Core.Models;
 using Thinktecture.IdentityServer.EntityFramework;
 
-namespace IdentityServer3.EntityFramework.Cli
+namespace IdentityServer3.EntityFramework.Cli.FileRunner
 {
     class ScopeRunner
     {
