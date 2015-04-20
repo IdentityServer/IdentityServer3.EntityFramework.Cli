@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Thinktecture.IdentityServer.Core.Services.Default;
-using Thinktecture.IdentityServer.EntityFramework;
+using IdentityServer3.Core.Services.Default;
+using IdentityServer3.EntityFramework;
 
 namespace IdentityServer3.EntityFramework.Cli.PermissionsRunner
 {
