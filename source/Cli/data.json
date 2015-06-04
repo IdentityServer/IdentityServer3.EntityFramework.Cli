@@ -17,7 +17,7 @@
                 "PostLogoutRedirectUris": [
                     "http://localhost:20025/"
                 ],
-                "ScopeRestrictions": [
+                "AllowedScopes": [
                     "openid",
                     "profile",
                     "email",
