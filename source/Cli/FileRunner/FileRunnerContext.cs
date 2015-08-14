@@ -1,8 +1,5 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using Thinktecture.IdentityServer.EntityFramework.Serialization;
+using IdentityServer3.EntityFramework.Serialization;
 
 namespace IdentityServer3.EntityFramework.Cli.FileRunner
 {
