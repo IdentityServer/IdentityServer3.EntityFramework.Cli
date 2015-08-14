@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Thinktecture.IdentityServer.Core.Models;
+using IdentityServer3.Core.Models;
 
 namespace IdentityServer3.EntityFramework.Cli.FileRunner
 {

@@ -1,7 +1,5 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using IdentityServer3.EntityFramework.Serialization;
 
 namespace IdentityServer3.EntityFramework.Cli.FileRunner
 {
@@ -12,7 +10,7 @@ namespace IdentityServer3.EntityFramework.Cli.FileRunner
         public override void Run()
         {
             var json = DataFileLoader.Load(File);
-            var config = JsonConvert.DeserializeObject<FileRunnerConfig>(json);
+            var config = JsonConvert.DeserializeObject<FileRunnerConfig>(json, new ClaimConverter());
 
             if (config.Clients != null)
             {
