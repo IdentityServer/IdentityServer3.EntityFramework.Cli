@@ -79,8 +79,8 @@ namespace IdentityServer3.EntityFramework.Cli
             }
             catch (Exception ex)
             {
-                Console.WriteLine();
-                Console.WriteLine("Error ({1}): {0}", ex.Message, ex.GetType().Name);
+                Console.Error.WriteLine("\nError ({1}): {0}", ex, ex.GetType().Name);
+                Environment.Exit(1);
             }
         }
 
